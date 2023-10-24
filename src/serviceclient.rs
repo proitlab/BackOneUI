@@ -88,7 +88,7 @@ pub fn get_auth_token_and_port(
             }
 
             #[cfg(windows)]
-            p.push_str("\\AppData\\Local\\BackOne\\authtoken.secret");
+            p.push_str("\\AppData\\Local\\ZeroTier\\One\\authtoken.secret");
 
             #[cfg(all(unix, not(target_os = "macos")))]
             p.push_str("/.backOneAuthToken");
@@ -111,7 +111,7 @@ pub fn get_auth_token_and_port(
                 }
 
                 #[cfg(windows)]
-                p.push_str("\\AppData\\Local\\BackOne\\authtoken.secret");
+                p.push_str("\\AppData\\Local\\ZeroTier\\One\\authtoken.secret");
 
                 #[cfg(all(unix, not(target_os = "macos")))]
                 p.push_str("/.backone-local-auth");
@@ -150,7 +150,7 @@ pub fn get_auth_token_and_port(
                     p.push_str("/Library/Application Support/BackOne/authtoken.secret");
 
                     #[cfg(windows)]
-                    p.push_str("\\AppData\\Local\\BackOne\\authtoken.secret");
+                    p.push_str("\\AppData\\Local\\ZeroTier\\One\\authtoken.secret");
 
                     #[cfg(all(unix, not(target_os = "macos")))]
                     p.push_str("/.backone-local-auth");
@@ -162,7 +162,7 @@ pub fn get_auth_token_and_port(
                     p.push_str("/Library/Application Support/BackOne/authtoken.secret");
 
                     #[cfg(windows)]
-                    p.push_str("\\AppData\\Local\\BackOne\\authtoken.secret");
+                    p.push_str("\\AppData\\Local\\ZeroTier\\One\\authtoken.secret");
 
                     #[cfg(all(unix, not(target_os = "macos")))]
                     p.push_str("/.backOneAuthToken");

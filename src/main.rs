@@ -46,7 +46,7 @@ pub(crate) static mut START_ON_LOGIN: bool = false;
 pub(crate) const GLOBAL_SERVICE_HOME_V2: &'static str = "/Library/Application Support/BackOne";
 
 #[cfg(windows)]
-pub(crate) const GLOBAL_SERVICE_HOME_V2: &'static str = "\\ProgramData\\BackOne";
+pub(crate) const GLOBAL_SERVICE_HOME_V2: &'static str = "\\ProgramData\\ZeroTier";
 
 #[cfg(any(
     target_os = "freebsd",
@@ -63,7 +63,7 @@ pub(crate) const GLOBAL_SERVICE_HOME_V2: &'static str = "/var/lib/backone";
 pub(crate) const GLOBAL_SERVICE_HOME_V1: &'static str = "/Library/Application Support/BackOne";
 
 #[cfg(windows)]
-pub(crate) const GLOBAL_SERVICE_HOME_V1: &'static str = "\\ProgramData\\BackOne";
+pub(crate) const GLOBAL_SERVICE_HOME_V1: &'static str = "\\ProgramData\\ZeroTier\\One";
 
 #[cfg(any(
     target_os = "freebsd",
@@ -1053,7 +1053,7 @@ fn main() {
             refresh_windows_start_on_login();
             unsafe {
                 APPLICATION_HOME = format!(
-                    "{}\\AppData\\Local\\BackOne",
+                    "{}\\AppData\\Local\\ZeroTier",
                     std::env::var("USERPROFILE")
                         .unwrap_or(std::env::var("HOMEPATH").unwrap_or(String::from("C:\\")))
                 );
@@ -1131,7 +1131,7 @@ fn main() {
         if !Path::new(unsafe { NETWORK_CACHE_PATH.as_str() }).is_file() {
             let _ = std::env::var("USERPROFILE").map(|uprof| {
                 std::fs::read(format!(
-                    "{}\\AppData\\Local\\BackOne\\networks.dat",
+                    "{}\\AppData\\Local\\ZeroTier\\One\\networks.dat",
                     uprof
                 ))
                 .map(|windows_networks_bin| {
