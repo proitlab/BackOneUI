@@ -207,7 +207,7 @@ fn refresh_windows_start_on_login() {
 
 #[cfg(target_os = "macos")]
 fn tray_icon_name() -> &'static str {
-    "trayIconTemplate.pdf"
+    "traybackone.png"
 } // must be in resources folder of app bundle
 
 #[cfg(not(target_os = "macos"))]
