@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=BackOne UI
+Exec=/usr/bin/backone_desktop_ui
+Icon=/usr/share/backone/BackOneIcon.png
+Categories=System;
