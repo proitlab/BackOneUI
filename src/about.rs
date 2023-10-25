@@ -44,10 +44,9 @@ pub fn about_main(version: &str) {
             "
 BackOne {}
 Desktop System Tray UI
-(c)2021-2022 BackOne, Inc.
+(c)2021-2023 BackOne, Inc.
 
 Released under the terms of the Mozilla Public License V2.0 (MPL)
-Source URL: https://github.com/proitlab/BackOneUI
 
 This UI application contains the following additional open source software:
 
